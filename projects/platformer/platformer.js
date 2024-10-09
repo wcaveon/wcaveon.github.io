@@ -73,7 +73,7 @@ createCollectable('database',1300,450,1,1)
 createCannon('top',665,600,25,25)
 createCannon('left',10,870,25,25)
 createCannon('right',700,1400,25,25)
-createCannon('top',1280,550,25,25)    
+createCannon('top',1280,570,25,25)    
     /////////////////////////////////////////////////
     //////////ONLY CHANGE ABOVE THIS POINT///////////
     /////////////////////////////////////////////////
