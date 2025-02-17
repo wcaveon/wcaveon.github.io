@@ -32,11 +32,9 @@ var circles = [];
         }
 
         // TODO 3 / 7 : Call the drawCircle() function 
-    drawCircle();
-    drawCircle();
-    drawCircle();
-    drawCircle();
-    drawCircle();
+    for (var count = 0; count < 100; count++ ) {
+        drawCircle();
+    }
 
         ////////////////////////////////////////////////////////////
         ///////////////// PROGRAM LOGIC ////////////////////////////
@@ -55,8 +53,11 @@ var circles = [];
             physikz.updatePosition(circles[3])
             physikz.updatePosition(circles[4])
             // TODO 5 / 10 : Call game.checkCirclePosition() on your circles.
-           
-
+           game.checkCirclePosition(circles[0])
+           game.checkCirclePosition(circles[1])
+           game.checkCirclePosition(circles[2])
+           game.checkCirclePosition(circles[3])
+           game.checkCirclePosition(circles[4])
             // TODO 9 : Iterate over the array
            
             
@@ -75,7 +76,15 @@ var circles = [];
             }
             
             // TODO 6 : YOUR CODE STARTS HERE //////////////////////
-            
+            else if (circle.x < 0) {
+                circle.x = canvas.width; 
+            }
+            else if (circle.y < 0) {
+                circle.y = canvas.height;
+            }
+            else if (circle.y > canvas.height) {
+                circle.y = 0;
+            }
 
 
             // YOUR TODO 6 CODE ENDS HERE //////////////////////////
