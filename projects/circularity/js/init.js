@@ -47,13 +47,12 @@ var circles = [];
         */
         function update() {
             // TODO 4 : Update the circle's position //
-            for (var index = 0; index <= 4; index++) {
+            for (var index = 0; index < circles.length; index++) {
                 physikz.updatePosition(circles[index])
+                game.checkCirclePosition(circles[index])
             }
             // TODO 5 / 10 : Call game.checkCirclePosition() on your circles.
-           for (var i = 0; i <= 4; i++){
-            game.checkCirclePosition(circles[i])
-           }
+          
             // TODO 9 : Iterate over the array
            
             
