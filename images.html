@@ -1,0 +1,172 @@
+
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Images</title>
+      <style>
+                  body {
+                background: #00008b;
+                color:#ffffff;
+                ;
+                font-family: arial;
+                font-size: 20px;
+                padding: 10px;
+            }
+            #all-contents {
+              max-width: fit-content;
+                margin: auto;
+
+            }
+         
+            /* navigation menu */
+            nav {
+                background: rgb(255, 102, 0);
+                margin: 0 auto;
+                display: flex;
+                padding: 10px;
+                border-radius: 10px;
+                border-color: black;
+                margin: 0 auto;
+                margin-bottom: 15px;
+                box-shadow: 6px 6px #0000004b;
+            }
+            h1 {
+                display: flex;
+                align-items: center;
+                color: rgb(255, 255, 255);
+                flex: 1;
+                margin: 0;
+                font-style: oblique;
+                font-size: 40px;
+                padding: 2px;
+            }
+            #nav-ul {
+                list-style-image: none;
+            }
+            .nav-li {
+                display: inline-block;
+                padding: 5px;
+            }
+            #navanchor {
+                text-decoration: none;
+                color: rgb(0, 0, 0);
+                padding-right: 25px;
+            }
+        
+            /* main container area beneath menu */
+            main {
+                background: rgb(4, 0, 255);
+                display: flex;
+                border-radius: 10px;
+                border-color: rgb(0, 0, 0);
+                box-shadow: 6px 6px #0800004b;
+                margin-left: 10%;
+                margin-right: 10%;
+            }
+      </style>
+    </head>
+    <body>
+        <div id="all-contents">
+            <nav>
+                <h1>Images</h1>
+                <ul id="nav-ul">
+                    <li class="nav-li">
+                        <a id="navanchor" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-li">
+                        <a id="navanchor" href="portfolio.html">Portfolio</a>
+                        </li>
+                    <li class="nav-li"><a id="navanchor" href="images.html">Images</a>
+                    </li>
+                </ul>
+            </nav>
+                <!-- Start slideshow creation for portfolio. -->
+         <!-- Slideshow container -->
+<div class="slideshow-container">
+
+    <!-- Full-width images with number and caption text -->
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 10</div>
+      <img src="assets/A line.JPG" style="width:100%">
+      <div class="text">A Line</div>
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 10</div>
+      <img src="assets/Contrast.JPG" style="width:100%">
+      <div class="text">Contrast</div>
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 10</div>
+      <img src="assets/Beauty.JPG" style="width:100%">
+      <div class="text">Beauty</div>
+    </div>
+    <div class="mySlides fade">
+        <div class="numbertext">4 / 10</div>
+        <img src="assets/Ant View.JPG" style="width:100%">
+        <div class="text">An Ant's View Of The World</div>
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext">5 / 10</div>
+        <img src="assets/Shape.JPG" style="width:100%">
+        <div class="text">Shape</div>
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext">6 / 10</div>
+        <img src="assets/Representation.JPG" style="width:100%">
+        <div class="text">Something That Represents Me</div>
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext">7 / 10</div>
+        <img src="assets/Texture.JPG" style="width:100%">
+        <div class="text">Texture</div>
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext">8 / 10</div>
+        <img src="assets/Symbol.JPG" style="width:100%">
+        <div class="text">A Symbol</div>
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext">9 / 10</div>
+        <img src="assets/Rule of Thirds.JPG" style="width:100%">
+        <div class="text">The Rule of Thirds</div>
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext">10 / 10</div>
+        <img src="assets/School Spirit.JPG" style="width:100%">
+        <div class="text">School Spirit</div>
+      </div>
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br>
+  
+  <!-- The dots/circles -->
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+  </div>
+      </body>
+        <script>
+           let slideIndex = 0;
+            showSlides();
+  
+            function showSlides() {
+     
+              let i;
+              let slides = document.getElementsByClassName("mySlides");
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+              }
+              slideIndex++;
+              if (slideIndex > slides.length) {slideIndex = 1}
+              slides[slideIndex-1].style.display = "block";
+              setTimeout(showSlides, 4000); // Change image every 4 seconds
+            }
+          </script>        
+    
+    </body>
+</html>
